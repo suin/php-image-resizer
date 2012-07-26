@@ -151,12 +151,12 @@ class ImageResizer implements \Suin\ImageResizer\ImageResizerInterface
 	 */
 	protected function _needsResize()
 	{
-		if ( $this->maxHeight > 0 and $this->originalHeight > $this->maxHeight )
+		if ( $this->maxWidth > 0 and $this->originalWidth > $this->maxWidth )
 		{
 			return true;
 		}
 
-		if ( $this->maxWidth > 0 and $this->originalWidth > $this->maxWidth )
+		if ( $this->maxHeight > 0 and $this->originalHeight > $this->maxHeight )
 		{
 			return true;
 		}
