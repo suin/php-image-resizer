@@ -1,0 +1,19 @@
+{
+	"name": "suin/php-image-resizer",
+	"description": "A simple image resizing library for PHP.",
+	"authors": [
+		{
+			"name": "Hidehito Nozawa aka Suin",
+			"email": "suinyeze@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+		"ext-gd": "*"
+	},
+	"autoload": {
+		"psr-0": {
+			"Suin": "Source/"
+		}
+	}
+}
