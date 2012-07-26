@@ -216,6 +216,17 @@ class ImageResizerTest extends \XoopsUnit\TestCase
 				'maxWidth'       => 320,
 				'maxHeight'      => 240,
 			)),
+			// long image
+			array(array(
+				'filename'       => __DIR__.'/images/building@480x640.jpg',
+				'type'           => IMAGETYPE_JPEG,
+				'expectedWidth'  => 360,
+				'expectedHeight' => 480,
+				'originalWidth'  => 480,
+				'originalHeight' => 640,
+				'maxWidth'       => 640,
+				'maxHeight'      => 480,
+			)),
 		);
 	}
 
@@ -358,6 +369,15 @@ class ImageResizerTest extends \XoopsUnit\TestCase
 					'originalWidth'  => 960,
 					'maxHeight'      => 640,
 					'maxWidth'       => 480,
+				)),
+			// 75 percent scale
+			array(
+				array('width' => 360, 'height' => 480,),
+				array(
+					'originalHeight' => 640,
+					'originalWidth'  => 480,
+					'maxHeight'      => 480,
+					'maxWidth'       => 640,
 				)),
 			// no limit for height
 			array(
