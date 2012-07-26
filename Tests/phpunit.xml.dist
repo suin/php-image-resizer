@@ -27,7 +27,7 @@
 
 	<filter>
 		<whitelist>
-			<directory suffix=".php">../html/modules/your_module</directory>
+			<directory suffix=".php">../Source</directory>
 			<!-- file>/path/to/file</file -->
 			<exclude>
 				<!-- directory suffix="Interface.php">../Source</directory -->
