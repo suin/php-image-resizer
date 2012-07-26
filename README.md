@@ -17,7 +17,7 @@ Please use PSR-0 compatible class loader to load this library.
 
 ## How to Use
 
-```
+```php
 <?php
 use \Suin\ImageResizer\ImageResizer;
 
