@@ -343,7 +343,7 @@ class ImageResizerTest extends \XoopsUnit\TestCase
 		return array(
 			// max size equals to original size
 			array(
-				array('height' => 1, 'width' => 1),
+				array('width' => 1, 'height' => 1, ),
 				array(
 					'originalHeight' => 1,
 					'originalWidth'  => 1,
@@ -352,7 +352,7 @@ class ImageResizerTest extends \XoopsUnit\TestCase
 				)),
 			// 1/2 scale
 			array(
-				array('height' => 640, 'width' => 480),
+				array('width' => 480, 'height' => 640,),
 				array(
 					'originalHeight' => 1280,
 					'originalWidth'  => 960,
@@ -361,7 +361,7 @@ class ImageResizerTest extends \XoopsUnit\TestCase
 				)),
 			// no limit for height
 			array(
-				array('height' => 640, 'width' => 480),
+				array('width' => 480, 'height' => 640, ),
 				array(
 					'originalHeight' => 1280,
 					'originalWidth'  => 960,
@@ -370,7 +370,7 @@ class ImageResizerTest extends \XoopsUnit\TestCase
 				)),
 			// no limit for width
 			array(
-				array('height' => 640, 'width' => 480),
+				array('width' => 480, 'height' => 640, ),
 				array(
 					'originalHeight' => 1280,
 					'originalWidth'  => 960,
@@ -379,7 +379,7 @@ class ImageResizerTest extends \XoopsUnit\TestCase
 				)),
 			// no limit for both height and width, returns original size
 			array(
-				array('height' => 1280, 'width' => 960),
+				array('width' => 960, 'height' => 1280, ),
 				array(
 					'originalHeight' => 1280,
 					'originalWidth'  => 960,

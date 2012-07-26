@@ -11,18 +11,18 @@ interface ImageResizerInterface
 	public function __construct($filename);
 
 	/**
-	 * Set max height
-	 * @param int $height Max height(pixel)
-	 * @return $this Must return self instance
-	 */
-	public function maxHeight($height);
-
-	/**
 	 * Set max width
 	 * @param int $width Max width(pixel)
 	 * @return $this Must return self instance
 	 */
 	public function maxWidth($width);
+
+	/**
+	 * Set max height
+	 * @param int $height Max height(pixel)
+	 * @return $this Must return self instance
+	 */
+	public function maxHeight($height);
 
 	/**
 	 * Update image size

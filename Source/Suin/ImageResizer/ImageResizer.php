@@ -15,9 +15,9 @@ class ImageResizer implements \Suin\ImageResizer\ImageResizerInterface
 	/** @var string */
 	protected $filename;
 	/** @var int */
-	protected $originalHeight;
-	/** @var int */
 	protected $originalWidth;
+	/** @var int */
+	protected $originalHeight;
 	/** @var int */
 	protected $type;
 	/** @var string */
@@ -62,21 +62,10 @@ class ImageResizer implements \Suin\ImageResizer\ImageResizerInterface
 		}
 
 		$this->filename = $filename;
-		$this->originalHeight = $info[1];
 		$this->originalWidth  = $info[0];
+		$this->originalHeight = $info[1];
 		$this->type = $info[2];
 		$this->mime = $info['mime'];
-	}
-
-	/**
-	 * Set max height
-	 * @param int $height Max height(pixel)
-	 * @return $this Must return self instance
-	 */
-	public function maxHeight($height)
-	{
-		$this->maxHeight = $height;
-		return $this;
 	}
 
 	/**
@@ -87,6 +76,17 @@ class ImageResizer implements \Suin\ImageResizer\ImageResizerInterface
 	public function maxWidth($width)
 	{
 		$this->maxWidth = $width;
+		return $this;
+	}
+
+	/**
+	 * Set max height
+	 * @param int $height Max height(pixel)
+	 * @return $this Must return self instance
+	 */
+	public function maxHeight($height)
+	{
+		$this->maxHeight = $height;
 		return $this;
 	}
 
@@ -185,16 +185,16 @@ class ImageResizer implements \Suin\ImageResizer\ImageResizerInterface
 		if ( count($scales) === 0 )
 		{
 			return array(
-				'height' => $this->originalHeight,
 				'width'  => $this->originalWidth,
+				'height' => $this->originalHeight,
 			);
 		}
 
 		$scale = min($scales);
 
 		return array(
-			'height' => intval($this->originalHeight * $scale),
 			'width'  => intval($this->originalWidth * $scale),
+			'height' => intval($this->originalHeight * $scale),
 		);
 	}
 }
