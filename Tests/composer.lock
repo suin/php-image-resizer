@@ -1,0 +1,25 @@
+{
+    "hash": "4f49593d24dfc1a507e3752594ca18e5",
+    "packages": [
+        {
+            "package": "EHER/PHPUnit",
+            "version": "1.6"
+        },
+        {
+            "package": "suin/xoopsunit",
+            "version": "1.2"
+        },
+        {
+            "package": "symfony/finder",
+            "version": "v2.0.16"
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": [
+
+    ]
+}
