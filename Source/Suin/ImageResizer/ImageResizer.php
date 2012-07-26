@@ -93,6 +93,7 @@ class ImageResizer implements \Suin\ImageResizer\ImageResizerInterface
 	/**
 	 * Update image size
 	 * @return bool Returns TRUE on success, otherwise returns FALSE
+	 * @throws \RuntimeException
 	 */
 	public function resize()
 	{
