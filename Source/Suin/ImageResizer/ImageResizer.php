@@ -122,13 +122,14 @@ class ImageResizer implements \Suin\ImageResizer\ImageResizerInterface
 
 		$canvas = imagecreatetruecolor($newSize['width'], $newSize['height']); // Requires GD 2.0.28 or later
 
-		/* Check if this image is PNG or GIF, then set if Transparent*/
-        	if($this->type == IMAGETYPE_PNG || $this->type == IMAGETYPE_GIF){
-            		imagealphablending($canvas, false);
-            		imagesavealpha($canvas,true);
-            		$transparent = imagecolorallocatealpha($canvas, 255, 255, 255, 127);
-            		imagefilledrectangle($canvas, 0, 0, $newSize['width'], $newSize['height'], $transparent);
-        	}
+		// Check if this image is PNG or GIF, then set if Transparent
+		if ( $this->type === IMAGETYPE_PNG or $this->type === IMAGETYPE_GIF )
+		{
+			imagealphablending($canvas, false);
+			imagesavealpha($canvas, true);
+			$transparent = imagecolorallocatealpha($canvas, 255, 255, 255, 127);
+			imagefilledrectangle($canvas, 0, 0, $newSize['width'], $newSize['height'], $transparent);
+		}
 
 		if ( imagecopyresampled($canvas, $source, 0, 0, 0, 0, $newSize['width'], $newSize['height'], $this->originalWidth, $this->originalHeight) === false )
 		{
