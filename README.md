@@ -10,10 +10,16 @@ This is a simple image resizing library for PHP.
 
 ## Installation
 
-`git clone` and drop `Source` directory to your project.
+The recommended way to install this library is through composer. Just create a `composer.json` file and run the `php composer.phar install` command to install it:
 
-Please use PSR-0 compatible class loader to load this library.
-
+```json
+{
+	"require": {
+		"php":          ">=5.3.0",
+		"suin/php-image-resizer": ">=1.0.0"
+	}
+}
+```
 
 ## How to Use
 
