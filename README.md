@@ -29,7 +29,7 @@ use \Suin\ImageResizer\ImageResizer;
 
 $resizer = new ImageResizer('/path/to/your/image.jpeg');
 
-if ( $resizer->maxWidth(480)->maxHeihgt(640)->resize() === false ) {
+if ( $resizer->maxWidth(480)->maxHeight(640)->resize() === false ) {
 	// error
 } else {
 	// success
